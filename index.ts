@@ -6,7 +6,7 @@ router.get("/", (ctx) => {
   ctx.response.redirect("https://xditya.me");
 });
 
-router.get("/light", (ctx) => {
+router.get("/get", (ctx) => {
   ctx.response.body = { light: 12, temperature: 12, gas: 12 };
 });
 
