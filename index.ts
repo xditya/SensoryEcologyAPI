@@ -6,8 +6,17 @@ router.get("/", (ctx) => {
   ctx.response.redirect("https://xditya.me");
 });
 
+function randomIntFromInterval(min: number, max: number) {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 router.get("/get", (ctx) => {
-  ctx.response.body = { light: 12, temperature: 12, gas: 12 };
+  ctx.response.body = {
+    light: randomIntFromInterval(1, 20),
+    temperature: randomIntFromInterval(1, 20),
+    gas: randomIntFromInterval(1, 20),
+  };
 });
 
 const app = new Application();
