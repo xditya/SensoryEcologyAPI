@@ -7,7 +7,7 @@ router.get("/", (ctx) => {
 });
 
 router.get("/light", (ctx) => {
-  ctx.response.body = "abc";
+  ctx.response.body = { light: 12, temperature: 12, gas: 12 };
 });
 
 const app = new Application();
