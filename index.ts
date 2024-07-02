@@ -31,31 +31,31 @@ router.get("/set", async (ctx) => {
   ctx.response.body = { status: "done" };
 });
 
-// router.get("/get", async (ctx) => {
-//   const data = await getData();
-//   ctx.response.status = 200;
-//   ctx.response.body = data;
-// });
+router.get("/get", async (ctx) => {
+  const data = await getData();
+  ctx.response.status = 200;
+  ctx.response.body = data;
+});
 
 // function randomIntFromInterval(min: number, max: number) {
 //   // min and max included
 //   return Math.floor(Math.random() * (max - min + 1) + min);
 // }
 
-const tempArr = [29, 30, 31, 32];
-const gasArr = [50, 65, 88, 100, 150, 186];
-const lightArr = [1000, 500, 100, 50];
+// const tempArr = [29, 30, 31, 32];
+// const gasArr = [50, 65, 88, 100, 150, 186];
+// const lightArr = [1000, 500, 100, 50];
 
-router.get("/get", (ctx) => {
-  const light = lightArr[Math.floor(Math.random() * lightArr.length)];
-  const temperature = tempArr[Math.floor(Math.random() * tempArr.length)];
-  const gas = gasArr[Math.floor(Math.random() * gasArr.length)];
-  ctx.response.body = {
-    light,
-    temperature,
-    gas,
-  };
-});
+// router.get("/get", (ctx) => {
+//   const light = lightArr[Math.floor(Math.random() * lightArr.length)];
+//   const temperature = tempArr[Math.floor(Math.random() * tempArr.length)];
+//   const gas = gasArr[Math.floor(Math.random() * gasArr.length)];
+//   ctx.response.body = {
+//     light,
+//     temperature,
+//     gas,
+//   };
+// });
 
 // router.get("/get", (ctx) => {
 //   ctx.response.body = {
